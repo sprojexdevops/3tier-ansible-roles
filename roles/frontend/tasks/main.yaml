@@ -33,10 +33,11 @@
   ansible.builtin.template:
     src: frontend-upstream.conf.j2
     dest: /etc/nginx/conf.d/frontend-upstream.conf
-  notify: start and enable nginx service
+  notify: 
+  - start and enable nginx service
 
-- name: start and enable nginx service
-  ansible.builtin.service:
-    name: nginx
-    state: restarted
-    enabled: yes
+# - name: start and enable nginx service
+#   ansible.builtin.service:
+#     name: nginx
+#     state: restarted
+#     enabled: yes
