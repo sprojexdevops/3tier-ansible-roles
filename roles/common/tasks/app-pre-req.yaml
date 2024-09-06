@@ -1,10 +1,10 @@
-- name: "Remove existing directory for {{component}}"
+- name: "Remove existing directory for {{component}} code"
   ansible.builtin.file:
     path: "{{app_location}}"
     state: absent
   ignore_errors: true
 
-- name: "create directory for {{component}}"
+- name: "create directory for {{component}} code"
   ansible.builtin.file:
     path: "{{app_location}}"
     state: directory
